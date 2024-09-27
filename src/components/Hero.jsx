@@ -1,7 +1,9 @@
-import React from "react";
 import tuFoto from "../assets/images/perfil.jpg"; // Asegúrate de tener tu foto en esta ruta
+import useIsMobile from "../hooks/IsMobile";
 
 const Hero = () => {
+  const isMobile = useIsMobile();
+
   return (
     <section
       id="hero"
@@ -9,8 +11,12 @@ const Hero = () => {
     >
       {/* Texto de Presentación */}
       <div className="md:w-1/2">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Hola, soy <span className="text-teal-200">[Roberto Carlos]</span>
+        <h1 className="text-3xl md:text-5xl font-bold mb-4">
+          Hola, soy{" "}
+          <span className="text-teal-200">
+            {isMobile ? <br /> : ""}
+            [Roberto Carlos]
+          </span>
         </h1>
         <p className="text-lg mb-6">
           Desarrollador Web Full Stack apasionado por crear experiencias
@@ -30,7 +36,7 @@ const Hero = () => {
         <img
           src={tuFoto}
           alt="Foto de [Tu Nombre]"
-          className="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-white shadow-lg object-cover"
+          className="w-40 h-40 md:w-80 md:h-80 rounded-full border-4 border-white shadow-lg object-cover"
         />
       </div>
     </section>
