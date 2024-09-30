@@ -9,13 +9,13 @@ import Footer from "./components/Footer";
 export default function App() {
   return (
     <>
-    <Header />
-    <Hero />
-    <About />
-    <Proyects />
-    <Skills />
-    <Contact />
-    <Footer />
+      <Header />
+      <Hero />
+      <About />
+      <Proyects />
+      <Skills />
+      <Contact />
+      <Footer />
     </>
-  )
+  );
 }

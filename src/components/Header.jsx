@@ -1,9 +1,10 @@
 // src/components/Header.jsx
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Importar iconos de React Icons
-import { motion, AnimatePresence } from "framer-motion"; // Importar Framer Motion
+import { motion, AnimatePresence, useScroll } from "framer-motion"; // Importar Framer Motion
 
 const Header = () => {
+  const { scrollYProgress } = useScroll();
   const [isOpen, setIsOpen] = useState(false); // Estado para controlar el menú
 
   const toggleMenu = () => {
@@ -24,6 +25,11 @@ const Header = () => {
 
   return (
     <header className="fixed w-full bg-gray-800 text-white shadow-md z-50">
+      <motion.div
+        className="fixed top-0 left-0 h-2 w-full bg-teal-500 origin-left z-[60]"
+        style={{ scaleX: scrollYProgress }}
+      />
+
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
         <h1 className="text-2xl font-bold">Fallen Dev</h1>
