@@ -59,7 +59,7 @@ const Header = () => {
             </li>
             <li>
               <a href="#contact" className="hover:text-teal-200">
-                Contacto
+                Contactos
               </a>
             </li>
           </ul>
