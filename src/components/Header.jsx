@@ -32,7 +32,7 @@ const Header = () => {
 
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
-        <h1 className="text-2xl font-bold">Fallen {`{Dev}`}</h1>
+        <h1 className="text-2xl font-bold">Fallen Dev</h1>
 
         {/* Navegación Horizontal (Visible en pantallas medianas y superiores) */}
         <nav>
